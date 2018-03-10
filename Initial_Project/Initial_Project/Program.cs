@@ -12,7 +12,7 @@
 //    {
 //        static void Main(string[] args)
 //        {
-
+    
 //            IWebDriver driver = new ChromeDriver();
 
 //            //2 methods to open website
