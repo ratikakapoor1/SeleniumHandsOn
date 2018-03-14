@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Office.Interop;
+using Microsoft.Office.Interop.Excel;
 
 namespace BasicLangDemo
 {    /// <summary>
@@ -52,8 +54,11 @@ namespace BasicLangDemo
         public string StringFunct()
         {
             var dir = @"Insert \n to define a new line";
-            return dir;
+            
+             return dir;
+
         }
+
 
     }
     

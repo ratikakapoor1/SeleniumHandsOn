@@ -17,8 +17,8 @@ namespace Initial_Project
 
         public static void Main(string[] args)
         {
-                IWebDriver driver = new ChromeDriver();
-            
+            IWebDriver driver = new ChromeDriver();
+                       
             try
             {
                 // direct calling of static functions
@@ -82,7 +82,11 @@ namespace Initial_Project
             //Console.Read();
 
             //get link count by list
+            //List<IWebElement> list = driver.FindElements(By.TagName("a")).ToList();
             IList<IWebElement> list = driver.FindElements(By.TagName("a"));
+           
+
+            // IList<IWebElement> list = driver.FindElements(By.TagName("a"));
             int linkCount = list.Count;
 
             List<string> str = new List<string>();
