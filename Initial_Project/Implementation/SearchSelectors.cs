@@ -19,6 +19,17 @@ namespace Implementation
         public static string SignInButton { get { return "div.__STYLE_GUIDE__Button__group___lCBgyH8 button"; }}
         public static string UsernameCss { get { return "#email"; }  }
         public static string PasswordCss { get { return "#password"; } }
-        public static string ElementCss { get { return "span._1XOdkjz"; }}
-    }
+        public static string ElementCss { get { return "span._1XOdkjz"; } }
+
+        //Invest Smart
+        public static string ISLogInLink { get { return "div.tool-hold.hidden-sm-down.float-right > a"; } }
+        public static string ISLogInButton { get { return "input[type='submit']"; } }
+        public static string ISUsernameCss { get { return "#Email"; } }
+        public static string ISPasswordCss { get { return "#Password"; } }
+        public static string ISElementCss { get { return "div.text > a[title='Log Off']"; } }
+        public static string ISLoginError { get { return "span.field-validation-error"; } }
+           
+
+            
+        }
 }

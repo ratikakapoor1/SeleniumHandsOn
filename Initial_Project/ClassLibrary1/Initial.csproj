@@ -52,49 +52,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\InvestSmartSteps.cs">
+      <Link>StepFiles\InvestSmartSteps.cs</Link>
+    </Compile>
+    <Compile Include="FeatureFiles\InvestSmart.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvestSmart.feature</DependentUpon>
+    </Compile>
     <Compile Include="Hook.cs" />
-    <Compile Include="InitialDemo.feature.cs">
+    <Compile Include="FeatureFiles\InitialDemo.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InitialDemo.feature</DependentUpon>
     </Compile>
-    <Compile Include="InitialDemoSteps.cs" />
-    <Compile Include="Jabong.feature.cs">
+    <Compile Include="StepFiles\InitialDemoSteps.cs" />
+    <Compile Include="FeatureFiles\Jabong.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Jabong.feature</DependentUpon>
     </Compile>
-    <Compile Include="JabongSteps.cs" />
+    <Compile Include="StepFiles\JabongSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GoogleSearch.feature.cs">
+    <Compile Include="FeatureFiles\GoogleSearch.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GoogleSearch.feature</DependentUpon>
     </Compile>
-    <Compile Include="GoogleSearchSteps.cs" />
-    <Compile Include="Seek.feature.cs">
+    <Compile Include="StepFiles\GoogleSearchSteps.cs" />
+    <Compile Include="FeatureFiles\Seek.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Seek.feature</DependentUpon>
     </Compile>
-    <Compile Include="SeekSteps.cs" />
-    <Compile Include="TestClass1.cs" />
+    <Compile Include="StepFiles\SeekSteps.cs" />
+    <Compile Include="NUnitTestFile.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="InitialDemo.feature">
+    <None Include="FeatureFiles\InitialDemo.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InitialDemo.feature.cs</LastGenOutput>
     </None>
-    <None Include="Jabong.feature">
+    <None Include="FeatureFiles\InvestSmart.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>InvestSmart.feature.cs</LastGenOutput>
+    </None>
+    <None Include="FeatureFiles\Jabong.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Jabong.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="GoogleSearch.feature">
+    <None Include="FeatureFiles\GoogleSearch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GoogleSearch.feature.cs</LastGenOutput>
     </None>
-    <None Include="Seek.feature">
+    <None Include="FeatureFiles\Seek.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Seek.feature.cs</LastGenOutput>
     </None>

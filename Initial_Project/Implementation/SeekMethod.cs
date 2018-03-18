@@ -25,13 +25,12 @@ namespace Implementation
         public static string FindElementTitle(string searchCss)
         {
             string title = DriverInit.driver.FindElement(By.CssSelector(searchCss)).Text;
-            return title;
+            return title.Trim();
         }
 
         public static string FindPageTitle()
         {
-            string title = DriverInit.driver.Title;
-            return title;
+            return DriverInit.driver.Title;
         }
     }
 

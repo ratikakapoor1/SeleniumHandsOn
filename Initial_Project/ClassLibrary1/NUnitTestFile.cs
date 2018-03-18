@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace ClassLibrary1
 {
     [TestFixture]
-    public class TestClass1
+    public class NUnitTestFile
     {
         [Test]
         public static void TestMethod()

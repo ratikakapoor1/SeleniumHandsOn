@@ -10,6 +10,26 @@ using OpenQA.Selenium.Interactions;
 
 namespace Implementation
 {
+    public static class DriverExtension
+    {
+
+
+        public static bool WaitUnit(this IWebDriver driver, Func<bool> condition)
+        {
+            try
+            {
+                var abc = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+
+                abc.PollingInterval = TimeSpan.FromSeconds(10);
+                abc.Until(a => condition);
+
+            }
+            catch (Exception)
+            {
+            }
+            return true;
+        }
+    }
     public class Implement
     {
         public static void OpenUrl(string url)
@@ -27,13 +47,26 @@ namespace Implementation
         {
             DriverInit.driver.Manage().Timeouts().ImplicitWait = new TimeSpan(0, 0, 20);
         }
-
-        public static void ExplicitWait()
+        public static bool ExplicitWait(Func<bool> condition)
         {
-            IWait<IWebDriver> wait = new WebDriverWait(DriverInit.driver, TimeSpan.FromSeconds(20))
+            //IWait<IWebDriver> wait = new WebDriverWait(DriverInit.driver, TimeSpan.FromSeconds(40));
 
-            { PollingInterval = TimeSpan.FromMilliseconds(100)
-                        };
+            //wait.PollingInterval = TimeSpan.FromSeconds(10);
+            //wait.Until(a => condition);
+            //return true;
+
+            try
+            {
+                var abc = new WebDriverWait(DriverInit.driver, TimeSpan.FromSeconds(30));
+
+                abc.PollingInterval = TimeSpan.FromSeconds(10);
+                abc.Until(a => condition);
+
+            }
+            catch (Exception)
+            {
+            }
+            return true;
         }
 
         public static void SearchItem(string val)
