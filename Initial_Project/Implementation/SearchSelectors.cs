@@ -28,8 +28,26 @@ namespace Implementation
         public static string ISPasswordCss { get { return "#Password"; } }
         public static string ISElementCss { get { return "div.text > a[title='Log Off']"; } }
         public static string ISLoginError { get { return "span.field-validation-error"; } }
-           
 
-            
-        }
+        //Invest Smart - Invest With us page
+
+        public static string IWSInvestWithUsLink { get { return "#menu > li:nth-child(5) > a"; } }
+        //public static string IWSStrategyDropDown { get { return "#ourfunds > section > div > div.model-filter-options.ng-scope > div > div > div:nth-child(1) > div > div.dropdown.show > button"; } }
+        //public static string IWSTypeDropDown { get { return "#ourfunds > section > div > div.model-filter-options.ng-scope > div > div > div:nth-child(2) > div > div.dropdown > button"; } }
+        //public static string IWSStyleDropDown { get { return "#ourfunds > section > div > div.model-filter-options.ng-scope > div > div > div:nth-child(3) > div > div.dropdown > button"; } }
+        public static string IWSStrategyDropDown { get { return "#ourfunds > section > div > div.model-filter-options.ng-scope > div > div > div:nth-child(1) > div > div.dropdown.show > div > a:nth-child(4)"; } }
+        public static string IWSTypeDropDown { get { return "#ourfunds > section > div > div.model-filter-options.ng-scope > div > div > div:nth-child(2) > div > div.dropdown.show > div > a:nth-child(2)"; } }
+        public static string IWSStyleDropDown { get { return "#ourfunds > section > div > div.model-filter-options.ng-scope > div > div > div:nth-child(3) > div > div.dropdown.show > div > a:nth-child(2)"; } }
+        public static string IWSErrorDesc { get { return "div.no-results-container > h2";} }
+
+        //Invest Smart Shares page
+        public static string SPSharesLink { get { return "#menu > li:nth-child(4) > div > div > div > div > div:nth-child(2) > div.slide-nav > div > ul > li:nth-child(1) > a"; } }
+        public static string SPDropdownCss { get { return "#SectorID"; } }
+        public static string SPFindSharesButton { get { return "input.btn.btn-primary.triggerSpinner"; } }
+
+    }
+    
+
+        
 }
+

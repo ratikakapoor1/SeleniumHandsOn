@@ -66,9 +66,11 @@ namespace ClassLibrary1.FeatureFiles
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Login to IS Website with valid details")]
+        [NUnit.Framework.CategoryAttribute("login")]
         public virtual void LoginToISWebsiteWithValidDetails()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login to IS Website with valid details", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login to IS Website with valid details", new string[] {
+                        "login"});
 #line 5
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -85,9 +87,11 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Login to IS Website with in-valid details")]
+        [NUnit.Framework.CategoryAttribute("login")]
         public virtual void LoginToISWebsiteWithIn_ValidDetails()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login to IS Website with in-valid details", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login to IS Website with in-valid details", new string[] {
+                        "login"});
 #line 11
 this.ScenarioSetup(scenarioInfo);
 #line 12
@@ -104,9 +108,11 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Login to IS Website with blank password")]
+        [NUnit.Framework.CategoryAttribute("login")]
         public virtual void LoginToISWebsiteWithBlankPassword()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login to IS Website with blank password", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login to IS Website with blank password", new string[] {
+                        "login"});
 #line 17
 this.ScenarioSetup(scenarioInfo);
 #line 18
@@ -117,6 +123,25 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("I put username cton0385@gmail.com and blank password and click Log in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 21
  testRunner.Then("the page is displayed with error message that password is mandatory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("CheckShares page for Invest Smart website")]
+        public virtual void CheckSharesPageForInvestSmartWebsite()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CheckShares page for Invest Smart website", ((string[])(null)));
+#line 31
+this.ScenarioSetup(scenarioInfo);
+#line 32
+testRunner.Given("I invoke www.investsmart.com.au", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 33
+testRunner.And("click on Shares link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+testRunner.When("I enter sector as Energy and click Find Shares", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+testRunner.Then("search results should have Sector as energy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

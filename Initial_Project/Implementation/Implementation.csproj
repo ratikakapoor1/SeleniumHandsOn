@@ -41,6 +41,9 @@
     <Reference Include="WebDriver">
       <HintPath>..\..\..\..\..\.nuget\packages\selenium.webdriver\3.11.0\lib\net45\WebDriver.dll</HintPath>
     </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\Rahul project\Debug\WebDriver.Support.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DriverInit.cs" />
@@ -49,6 +52,7 @@
     <Compile Include="JabongHomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchSelectors.cs" />
+    <Compile Include="InvestSmart.cs" />
     <Compile Include="SeekMethod.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

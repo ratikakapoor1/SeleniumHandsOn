@@ -7,7 +7,7 @@ using NUnit.Framework;
 namespace ClassLibrary1
 {
     [Binding]
-    public class InvestSmartSteps
+       public class InvestSmartSteps
     {
         [Given(@"I invoke (.*)")]
 
@@ -35,6 +35,7 @@ namespace ClassLibrary1
         }
 
         [Then(@"the landing page is opened with Log off text")]
+
         public void ISThenTheHomePageIsDisplayed()
         {
             Implement.ExplicitWait(() => (!(DriverInit.driver.Url.Contains("log -in"))));
@@ -70,6 +71,69 @@ namespace ClassLibrary1
             string ExpError = "The Password field is required.";
             string ActualError = SeekMethod.FindElementTitle(SearchSelectors.ISLoginError);
             Assert.AreEqual(ExpError, ActualError);
+            DriverInit.Cleanup();
+        }
+
+        // Invest Wth US page
+      
+        [Given(@"I click Invest With Us link")]
+        public void GivenIClickInvestWithUsLink()
+        {
+            SeekMethod.Click(SearchSelectors.IWSInvestWithUsLink);
+        }
+
+
+        [When(@"I select Strategy as (.*) , Type as (.*) , Management Style as (.*)")]
+        public void WhenISelectFilters(string strategy, string type, string style)
+        {
+            //DriverInit.driver.FindElement(By.CssSelector(SearchSelectors.IWSStrategyDropDown)).Click();
+
+            InvestSmart.SelectItemByValueInDropdown(SearchSelectors.IWSStrategyDropDown, strategy);
+            InvestSmart.SelectItemByValueInDropdown(SearchSelectors.IWSTypeDropDown, type);
+            InvestSmart.SelectItemByValueInDropdown(SearchSelectors.IWSStyleDropDown, style);
+            Implement.ImplicitWait();
+
+        }
+
+        
+        [Then(@"No products found should be displayed")]
+        public void ThenNoProductsFoundShouldBeDisplayed()
+        {
+            string ActualErrDesc = SeekMethod.FindElementTitle(SearchSelectors.IWSErrorDesc);
+            string ExpErrorDesc = "No products found";
+            Assert.AreEqual(ExpErrorDesc, ActualErrDesc);
+            DriverInit.Cleanup();
+        }
+
+        // Shares page
+        [Given(@"click on Shares link")]
+        public void GivenClickOnSharesLink()
+        {
+            // SeekMethod.Click(SearchSelectors.SPSharesLink);
+            var WebElement = DriverInit.driver.FindElement(By.CssSelector(SearchSelectors.SPSharesLink));
+            InvestSmart.ClickViaJavascript(WebElement);
+            Implement.ExplicitWait(() => (DriverInit.driver.Url.Contains("shares")));
+              
+        }
+
+        [When(@"I enter sector as (.*) and click Find Shares")]
+        public void WhenIEnterSectorAsEnergyAndClickFindShares(string sector )
+        {
+            InvestSmart.SelectItemByValueInDropdown(SearchSelectors.SPDropdownCss, sector);
+            SeekMethod.Click(SearchSelectors.SPFindSharesButton);
+            Implement.ImplicitWait();
+        }
+
+        [Then(@"search results should have Sector as energy")]
+        public void ThenSearchResultsShouldHaveSectorAsEnergy()
+        {
+           var els = DriverInit.driver.FindElements(By.CssSelector("div.table-responsive > table > tbody > tr"));
+            int count = els.Count;
+            for (int i =1; i<=count; i++)
+            {
+                string val = DriverInit.driver.FindElement(By.CssSelector($"div.table-responsive > table > tbody > tr:nth-child({i}) > td:nth-child(3)")).Text;
+                Assert.AreEqual("Energy", val);
+            }
             DriverInit.Cleanup();
         }
 
