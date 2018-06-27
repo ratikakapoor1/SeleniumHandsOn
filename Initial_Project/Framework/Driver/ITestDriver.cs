@@ -34,5 +34,6 @@ namespace ISFramework.Driver
         object ExecuteJavaScript(string script, params object[] args);
 
         bool WaitUntil(Func<bool> condition, int maxWaitTimeInMilliseconds = -1);
+        void Implicitwait();
     }
 }

@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace ISFramework.Pages
 {
-    public interface IPageHome : IWebComponent
+    public interface ISharesPage : IWebComponent
     {
-        void ClickHeaderNavItems();
-        void ClickPrimaryButtons();
-        void ClickSecondaryButtons();
+        void FindAndClickLink();
+        void EnterVal(String val);
+        bool VerifyResult();
+
+
+
     }
 }

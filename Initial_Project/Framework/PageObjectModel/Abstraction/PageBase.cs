@@ -55,9 +55,16 @@ namespace ISFramework.PageObjectModel
         public virtual void ClickPrimaryButtons() { }
         public virtual void ClickSecondaryButtons() { }
 
+        
+
+
         protected ReadOnlyCollection<IWebElement> GetElements(string cssSelector)
         {
             return Driver.FindElements(cssSelector);
+          
+        }
+
+        
         }
     }
-}
+

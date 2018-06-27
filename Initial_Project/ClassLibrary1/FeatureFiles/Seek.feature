@@ -7,3 +7,4 @@ Scenario: Login to Website
 	And click on Sign In
 	When I enter email ratikakapoor1@gmail.com and password zaq1!QAZ and click Sign in
 	Then the home page is opened with name Ratika
+	

@@ -7,7 +7,7 @@ namespace ISFramework.PageObjectModel
         string PageUrl { get; }
         bool IsVisible { get; }
         bool WaitUntil(Func<bool> condition, int maxWaitTimeInMilliseconds = -1);
-        void ClickPrimaryButtons();
-        void ClickSecondaryButtons();
+        
+
     }
 }

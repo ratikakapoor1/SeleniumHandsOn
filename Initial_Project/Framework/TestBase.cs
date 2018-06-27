@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 
 namespace ISFramework
+
 {
     public class TestBase
     {

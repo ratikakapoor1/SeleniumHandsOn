@@ -73,9 +73,13 @@
     <Compile Include="PageObjectModel\Pages\HomePage\PageHome.cs" />
     <Compile Include="PageObjectModel\Pages\HomePage\PageHomeFactory.cs" />
     <Compile Include="PageObjectModel\Pages\HomePage\PageHomeUIMap.cs" />
+    <Compile Include="PageObjectModel\Pages\SharesPage\ISharesPage.cs" />
+    <Compile Include="PageObjectModel\Pages\SharesPage\SharesPage.cs" />
+    <Compile Include="PageObjectModel\Pages\SharesPage\SharesPageFactory.cs" />
+    <Compile Include="PageObjectModel\Pages\SharesPage\SharesPageUIMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestBase.cs" />
     <Compile Include="Driver\TestDriver.cs" />
+    <Compile Include="TestBase.cs" />
     <Compile Include="TestCases\HomePageTest.cs" />
     <Compile Include="WebManager.cs" />
   </ItemGroup>

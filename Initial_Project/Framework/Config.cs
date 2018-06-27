@@ -4,7 +4,8 @@ namespace ISFramework
 {
     public class Config
     {
-        public static string WebsiteURL { get { return ConfigurationManager.AppSettings["WebsiteURL"]; } }
+        //public static string WebsiteURL { get { return ConfigurationManager.AppSettings["WebsiteURL"]; } }
+        public static string WebsiteURL { get { return "https://www.investsmart.com.au/"; } }
         public static string RemoteDriverUrl { get { return ConfigurationManager.AppSettings["RemoteDriverUrl"]; } }        
         public static string TestUserName { get { return ConfigurationManager.AppSettings["TestUserName"]; } }
         public static string TestUserPassword { get { return ConfigurationManager.AppSettings["TestUserPassword"]; } }

@@ -1,4 +1,6 @@
 ﻿using ISFramework.Driver;
+using ISFramework.PageObjectModel;
+using ISFramework.PageObjectModel.Pages;
 using ISFramework.Pages;
 
 namespace ISFramework.PageObjectModel.Pages

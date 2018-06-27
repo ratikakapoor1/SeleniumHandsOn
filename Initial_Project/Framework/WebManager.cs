@@ -37,12 +37,14 @@ namespace ISFramework
         private static void CreatePages()
         {
             PageHome = PageHomeFactory.GetPageHome(Driver);
+            SharesPage = SharesPageFactory.GetSharesPagee(Driver);
             //PageInvestWithUs = PageInvestWithUsFactory.GetPageInvestWithUs(Driver);
             //PageInvestWithUsDetails = PageInvestWithUsDetailsFactory.GetPageInvestWithUsDetails(Driver);
             //PageShares = PageSharesFactory.GetPageShares(Driver);
             //PageCompanyProfile = PageCompanyProfileFactory.GetPageCompanyProfileDetails(Driver);
         }
         public static IPageHome PageHome { get; private set; }
+        public static ISharesPage SharesPage { get; private set; }
         //public static IPageInvestWithUs PageInvestWithUs { get; private set; }
         //public static IPageInvestWithUsDetails PageInvestWithUsDetails { get; private set; }
         //public static IPageShares PageShares { get; private set; }

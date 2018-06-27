@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.ObjectModel;
@@ -34,7 +35,7 @@ namespace ISFramework.Driver
         {
             var webDriverWait = new WebDriverWait(_iWebdriver, TimeSpan.FromSeconds(10));
             ExecuteJavaScript("window.scrollTo(0," + (webElement.Location.Y - 50) + ")");
-             webDriverWait.Until(ExpectedConditions.ElementToBeClickable(webElement));
+            webDriverWait.Until(ExpectedConditions.ElementToBeClickable(webElement));
             webElement.Click();
         }
         public void ClickViaJavascript(IWebElement webElement)
@@ -45,6 +46,7 @@ namespace ISFramework.Driver
         public ReadOnlyCollection<IWebElement> FindElements(string cssSelector)
         {
             return _iWebdriver.FindElements(By.CssSelector(cssSelector));
+
         }
         public IWebElement FindElement(string cssSelector)
         {
@@ -82,6 +84,7 @@ namespace ISFramework.Driver
         public void OpenURL(string URL)
         {
             _iWebdriver.Navigate().GoToUrl(URL);
+                       
         }
 
         public void Quit()
@@ -109,10 +112,16 @@ namespace ISFramework.Driver
             try
             {
                 result = webDriverWait.Until(formattedCondition);
+
             }
             catch
             { }
             return result;
+        }
+
+        public void Implicitwait()
+        {
+            _iWebdriver.Manage().Timeouts().ImplicitWait = new TimeSpan(0, 0, 20);
         }
 
         public void ClickOkButtonOnConfirmDialog()
@@ -140,7 +149,7 @@ namespace ISFramework.Driver
         public void CheckItemByValue(string cssSelector, string value)
         {
             var checkOrRadioControls = _iWebdriver.FindElements(By.CssSelector(cssSelector));
-            foreach(var control in checkOrRadioControls)
+            foreach (var control in checkOrRadioControls)
             {
                 if (control.GetAttribute("value") == value)
                 {
